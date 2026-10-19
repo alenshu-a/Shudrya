@@ -8,10 +8,10 @@ int main(){
 
     const Menu::MenuItem* current = &Menu::MAIN;
 
-    do{
+    do
+    {
         current = current->func(current);
-    }while(true);
-
+    } while (true);
+    
     return 0;
 }
-return 0 and bl
