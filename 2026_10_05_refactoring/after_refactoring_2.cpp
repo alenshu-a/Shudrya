@@ -11,18 +11,18 @@ int main()
         std::cin >> arr[i];
     }
 
-    bool isIncreasing = true;
+    bool is_increasing = true;
     int i = 0;
-    while (isIncreasing && (i < arr_size - 1)) {
+    while (is_increasing && (i < arr_size - 1)) {
         if (arr[i] < arr[i + 1]) {
-            isIncreasing = true;
+            is_increasing = true;
         } else {
-            isIncreasing = false;
+            is_increasing = false;
         }
         i++;
     }
 
-    if (isIncreasing) {
+    if (is_increasing) {
         std::cout << "Последовательность возрастающая";
         std::cout << std::endl;
     } else {
