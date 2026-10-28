@@ -3,12 +3,15 @@
 void my_sort(int *arr, const int size);
 void print_array(const char* const comment, int *arr, const int size);
 
+int k;
+int y = 0;
+
 int main() {
     int size;
     std::cout << "Введите размер массива" << std::endl;
     std::cin >> size;
     std::cout << "Введите элементы массива" << std::endl;
-    int arr[size]; 
+    int* arr = new int[size]; 
     int el;
     for (int i = 0; i < size; i++){
         std::cin >> el;
@@ -18,6 +21,8 @@ int main() {
     print_array("Первоначальный массив", arr, size);
     my_sort(arr, size);
     print_array("Отсортированный массив", arr,size);
+
+    delete[] arr;
 }
 
 void my_sort(int* const arr, const int size) {
